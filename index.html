@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ikan Kita - Ikan Segar Berkualitas Premium</title>
+
+    <!-- Meta SEO Dasar -->
+    <meta
+      name="description"
+      content="Ikan Kita menyediakan berbagai jenis ikan segar berkualitas premium di Cimahi dan sekitarnya. Dipanen langsung dari pembudidaya terpercaya."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ikankita.com/" />
+    <link rel="icon" href="image/logo-ikan kita.webp" type="image/webp" />
+
+    <!-- Open Graph / Social Media Meta -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Ikan Kita - Ikan Segar Berkualitas Premium"
+    />
+    <meta
+      property="og:description"
+      content="Penyedia ikan segar pilihan langsung dari pembudidaya terpercaya. Segar, sehat, dan siap antar."
+    />
+    <meta property="og:image" content="image/logo-ikan kitas.webp" />
+    <meta property="og:url" content="https://ikankita.com/" />
+
+    <!-- Open Graph untuk WhatsApp & Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Ikan Kita - Supplier Ikan Nila Segar Cimahi & Subang"
+    />
+    <meta
+      property="og:description"
+      content="Cari ikan tawar terdekat? Kami menyediakan Ikan Nila, Mas, dan Gurame segar siap kirim ke rumah Anda."
+    />
+    <meta
+      property="og:image"
+      content="https://ikankita.com/assets/banner-ikan.jpg"
+    />
+    <meta property="og:url" content="https://ikankita.com/" />
+
+    <!-- Resource Hints untuk Performa -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+      rel="noopener noreferrer"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="noopener noreferrer"
+    />
+
+    <!-- Schema Markup / JSON-LD (SEO) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Ikan Kita",
+        "image": "image/logo-besar.png",
+        "telephone": "+6283163581373",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Raya Cimindi No.123, Karangmekar",
+          "addressLocality": "Cimahi Tengah",
+          "addressRegion": "Jawa Barat",
+          "addressCountry": "ID"
+        },
+        "url": "https://ikankita.com/",
+        "openingHours": "Mo-Su 07:00-20:00"
+      }
+    </script>
+
+    <!-- Quicklink Optimization Script -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"
+      defer
+    ></script>
+    <script>
+      window.addEventListener("load", () => {
+        if (typeof quicklink !== "undefined") {
+          quicklink.listen();
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- FLOATING WHATSAPP -->
+    <a
+      href="https://wa.me/6283163581373?text=Halo%20Ikan%20Kita,%20saya%20ingin%20bertanya."
+      class="floating-wa"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat WhatsApp Ikan Kita"
+    >
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar" aria-label="Navigasi Utama">
+        <div class="logo">
+          <img
+            src="image/logo-ikan kita.webp"
+            alt="Logo Ikan Kita"
+            loading="lazy"
+            width="50"
+            height="50"
+          />
+          <h2>Ikan Kita</h2>
+        </div>
+
+        <button
+          class="hamburger"
+          id="hamburger-menu"
+          aria-label="Buka Menu Navigasi"
+          aria-expanded="false"
+          type="button"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <ul class="nav-menu">
+          <li><a href="#beranda" class="nav-link">Beranda</a></li>
+          <li><a href="#tentang" class="nav-link">Tentang Kami</a></li>
+          <li><a href="#produk" class="nav-link">Produk</a></li>
+          <li><a href="#artikel" class="nav-link">Artikel</a></li>
+          <li><a href="#informasi" class="nav-link">Informasi</a></li>
+        </ul>
+
+        <div class="sosmed">
+          <!-- Instagram -->
+          <a
+            href="https://instagram.com/ikankita1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-item"
+            aria-label="Instagram Ikan Kita"
+          >
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+
+          <!-- Facebook -->
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-item"
+            aria-label="Facebook Ikan Kita"
+          >
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          </a>
+
+          <!-- Tokopedia -->
+          <a
+            href="https://tk.tokopedia.com/ZSXc4RKmq/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-item"
+            aria-label="Tokopedia Ikan Kita"
+          >
+            <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+          </a>
+
+          <!-- TikTok -->
+          <a
+            href="https://www.tiktok.com/@Ikankita1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-item"
+            aria-label="TikTok Ikan Kita"
+          >
+            <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="beranda">
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <p class="sub-heading">Selamat Datang Di</p>
+        <h1>Ikan Kita</h1>
+        <p>Ikan Segar Berkualitas Premium</p>
+        <a href="#produk" class="btn">LIHAT PRODUK</a>
+      </div>
+    </section>
+
+    <!-- TENTANG KAMI -->
+    <section class="tentang" id="tentang">
+      <div class="judul-section">
+        <h2>TENTANG KAMI</h2>
+        <h3>Mengapa Memilih Ikan Kita?</h3>
+        <p>
+          Kami menyediakan berbagai jenis ikan segar berkualitas premium yang
+          dipilih langsung dari pembudidaya terpercaya sehingga kesegaran dan
+          kualitas selalu terjaga hingga sampai ke tangan pelanggan.
+        </p>
+      </div>
+
+      <div class="tentang-container">
+        <div class="tentang-gambar">
+          <div class="slider">
+            <button class="prev" aria-label="Gambar Sebelumya" type="button">
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <img
+              id="slider-image"
+              src="image/logo-ikan kita.webp kita.webp"
+              alt="Produk Ikan Kita Segar"
+              loading="lazy"
+            />
+            <button class="next" aria-label="Gambar Selanjutnya" type="button">
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="slider-dots">
+            <button
+              class="dot active"
+              aria-label="Slide 1"
+              type="button"
+            ></button>
+            <button class="dot" aria-label="Slide 2" type="button"></button>
+            <button class="dot" aria-label="Slide 3" type="button"></button>
+            <button class="dot" aria-label="Slide 4" type="button"></button>
+            <button class="dot" aria-label="Slide 5" type="button"></button>
+          </div>
+
+          <div class="slider-caption">
+            <a
+              href="https://wa.me/6283163581373?text=Halo%20Ikan%20Kita,%20saya%20ingin%20bertanya."
+              class="slider-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Hubungi
+              Kami
+            </a>
+            <h4 id="slider-title">Ikan Kita</h4>
+            <p id="slider-desc">Menyediakan ikan segar berkualitas premium.</p>
+          </div>
+        </div>
+
+        <div class="tentang-text">
+          <h3>Ikan Segar Berkualitas Premium</h3>
+          <p>
+            Ikan Kita hadir untuk menyediakan ikan segar pilihan dengan kualitas
+            terbaik. Setiap ikan dipilih secara teliti agar pelanggan
+            mendapatkan produk yang sehat, segar, dan layak dikonsumsi setiap
+            hari.
+          </p>
+          <ul>
+            <li>
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Selalu
+              Fresh
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Harga
+              Kompetitif
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Banyak
+              Pilihan Ikan
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+              Pengiriman Cepat
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATISTIK -->
+    <section class="statistik" aria-label="Statistik Layanan">
+      <div class="stat-box">
+        <h2 class="counter" data-target="500">0</h2>
+        <p>Pelanggan Puas</p>
+      </div>
+      <div class="stat-box">
+        <h2 class="counter" data-target="9">0</h2>
+        <p>Jenis Ikan</p>
+      </div>
+      <div class="stat-box">
+        <h2 class="counter" data-target="100">0</h2>
+        <p>Kualitas Fresh (%)</p>
+      </div>
+      <div class="stat-box">
+        <h2 class="counter" data-target="7">0</h2>
+        <p>Layanan / Minggu</p>
+      </div>
+    </section>
+
+    <!-- PRODUK -->
+    <section class="produk" id="produk">
+      <h2>PRODUK</h2>
+      <div class="container-produk">
+        <!-- Card 1 -->
+        <article class="card">
+          <img
+            src="image/nila-merah subang.webp"
+            alt="Ikan Nila Subang Merah Segar"
+            loading="lazy"
+          />
+          <h3>Ikan Nila Subang Merah</h3>
+          <p>Ikan segar berkualitas premium.</p>
+          <div class="rating" aria-label="Rating 5 dari 5 bintang">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <div class="produk-button">
+            <a
+              href="pages/Produk-ikan-nila-subang-merah.html"
+              class="detail-btn"
+              >Lihat Detail</a
+            >
+            <a
+              href="https://wa.me/6283163581373?text=Halo%20Ikan%20Kita,%20Saya%20ingin%20memesan%20Ikan%20Nila%20Merah%20Subang."
+              class="wa-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pesan Sekarang</a
+            >
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <img
+            src="image/nila-hitam subang.webp"
+            alt="Ikan Nila Subang Hitam Segar"
+            loading="lazy"
+          />
+          <h3>Ikan Nila Subang Hitam</h3>
+          <p>Ikan segar berkualitas premium.</p>
+          <div class="rating" aria-label="Rating 5 dari 5 bintang">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <div class="produk-button">
+            <a href="pages/ikan-nila-subang-hitam.html" class="detail-btn"
+              >Lihat Detail</a
+            >
+            <a
+              href="https://wa.me/6283163581373?text=Halo%20Ikan%20Kita,%20Saya%20ingin%20memesan%20Ikan%20Nila%20Hitam%20Subang."
+              class="wa-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pesan Sekarang</a
+            >
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <img
+            src="image/ikan-mas subang.webp"
+            alt="Ikan Mas Subang Segar"
+            loading="lazy"
+          />
+          <h3>Ikan Mas Subang</h3>
+          <p>Ikan segar berkualitas premium.</p>
+          <div class="rating" aria-label="Rating 5 dari 5 bintang">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <div class="produk-button">
+            <a href="pages/ikan-mas-subang.html" class="detail-btn"
+              >Lihat Detail</a
+            >
+            <a
+              href="https://wa.me/6283163581373?text=Halo%20Ikan%20Kita,%20Saya%20ingin%20memesan%20Ikan%20Mas%20Subang."
+              class="wa-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pesan Sekarang</a
+            >
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card">
+          <img
+            src="image/ikan-lele.webp"
+            alt="Ikan Lele Segar"
+            loading="lazy"
+          />
+          <h3>Ikan Lele</h3>
+          <p>Ikan segar berkualitas premium.</p>
+          <div class="rating" aria-label="Rating 5 dari 5 bintang">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <div class="produk-button">
+            <a href="pages/Ikan-lele.html" class="detail-btn">Lihat Detail</a>
+            <a
+              href="https://wa.me/6283163581373?text=Halo%20Ikan%20Kita,%20Saya%20ingin%20memesan%20Ikan%20Lele."
+              class="wa-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pesan Sekarang</a
+            >
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="card">
+          <img
+            src="image/ikan-gurame.webp"
+            alt="Ikan Gurame Segar"
+            loading="lazy"
+          />
+          <h3>Ikan Gurame</h3>
+          <p>Ikan segar berkualitas premium.</p>
+          <div class="rating" aria-label="Rating 5 dari 5 bintang">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <div class="produk-button">
+            <a href="pages/ikan-gurame.html" class="detail-btn">Lihat Detail</a>
+            <a
+              href="https://wa.me/6283163581373?text=Halo%20Ikan%20Kita,%20Saya%20ingin%20memesan%20Ikan%20Gurame."
+              class="wa-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pesan Sekarang</a
+            >
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="card">
+          <img src="image/ikan-mas.webp" alt="Ikan Mas Segar" loading="lazy" />
+          <h3>Ikan Mas</h3>
+          <p>Ikan segar berkualitas premium.</p>
+          <div class="rating" aria-label="Rating 5 dari 5 bintang">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <div class="produk-button">
+            <a href="pages/ikan-mas.html" class="detail-btn">Lihat Detail</a>
+            <a
+              href="https://wa.me/6283163581373?text=Halo%20Ikan%20Kita,%20Saya%20ingin%20memesan%20Ikan%20Mas."
+              class="wa-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pesan Sekarang</a
+            >
+          </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="card">
+          <img
+            src="image/ikan-bawal.webp"
+            alt="Ikan Bawal Segar"
+            loading="lazy"
+          />
+          <h3>Ikan Bawal</h3>
+          <p>Ikan segar berkualitas premium.</p>
+          <div class="rating" aria-label="Rating 5 dari 5 bintang">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <div class="produk-button">
+            <a href="pages/ikan-bawal.html" class="detail-btn">Lihat Detail</a>
+            <a
+              href="https://wa.me/6283163581373?text=Halo%20Ikan%20Kita,%20Saya%20ingin%20memesan%20Ikan%20Bawal."
+              class="wa-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pesan Sekarang</a
+            >
+          </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="card">
+          <img
+            src="image/ikan-nila merah.webp"
+            alt="Ikan Nila Merah Segar"
+            loading="lazy"
+          />
+          <h3>Ikan Nila Merah</h3>
+          <p>Ikan segar berkualitas premium.</p>
+          <div class="rating" aria-label="Rating 5 dari 5 bintang">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <div class="produk-button">
+            <a href="pages/ikan-nila-merah.html" class="detail-btn"
+              >Lihat Detail</a
+            >
+            <a
+              href="https://wa.me/6283163581373?text=Halo%20Ikan%20Kita,%20Saya%20ingin%20memesan%20Ikan%20Nila%20Merah."
+              class="wa-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pesan Sekarang</a
+            >
+          </div>
+        </article>
+
+        <!-- Card 9 -->
+        <article class="card">
+          <img
+            src="image/nila-hitam.webp"
+            alt="Ikan Nila Hitam Segar"
+            loading="lazy"
+          />
+          <h3>Ikan Nila Hitam</h3>
+          <p>Ikan segar berkualitas premium.</p>
+          <div class="rating" aria-label="Rating 5 dari 5 bintang">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <div class="produk-button">
+            <a href="pages/ikan-nila-hitam.html" class="detail-btn"
+              >Lihat Detail</a
+            >
+            <a
+              href="https://wa.me/6283163581373?text=Halo%20Ikan%20Kita,%20Saya%20ingin%20memesan%20Ikan%20Nila%20Hitam."
+              class="wa-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pesan Sekarang</a
+            >
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ARTIKEL -->
+    <section class="artikel" id="artikel">
+      <div class="judul-section">
+        <h2>Blog Ikan Kita</h2>
+        <h3>Artikel Terbaru</h3>
+        <p>
+          Temukan berbagai informasi seputar ikan segar, tips penyimpanan hingga
+          manfaat mengonsumsi ikan.
+        </p>
+      </div>
+
+      <div class="artikel-container">
+        <article class="artikel-card">
+          <img
+            src="image/balong.jpeg"
+            alt="Panduan Memilih Ikan Segar Berkualitas"
+            loading="lazy"
+          />
+          <div class="artikel-content">
+            <time datetime="2026-07-20">20 Juli 2026</time>
+            <h3>Apa Perbedaan Antara Nila Subang dan Nila Biasa?</h3>
+            <p>
+              Artikel yang membahas terkait perbedaan ikan nila Subang dan ikan
+              nila biasa (konvensional).
+            </p>
+            <a href="artikel/Artikel Nila Subang.html">Baca Artikel →</a>
+          </div>
+        </article>
+
+        <article class="artikel-card">
+          <img
+            src="img/artikel/artikel2.jpg"
+            alt="Manfaat Kesehatan Mengonsumsi Ikan Segar"
+            loading="lazy"
+          />
+          <div class="artikel-content">
+            <time datetime="2026-07-18">18 Juli 2026</time>
+            <h3>Manfaat Mengonsumsi Ikan untuk Kesehatan</h3>
+            <p>
+              Protein ikan sangat baik untuk pertumbuhan anak dan menjaga
+              kesehatan keluarga.
+            </p>
+            <a href="pages/artikel-2.html">Baca Artikel →</a>
+          </div>
+        </article>
+
+        <article class="artikel-card">
+          <img
+            src="img/artikel/artikel3.jpg"
+            alt="Tips Penyimpanan Ikan Segar"
+            loading="lazy"
+          />
+          <div class="artikel-content">
+            <time datetime="2026-07-15">15 Juli 2026</time>
+            <h3>Tips Menyimpan Ikan Agar Tetap Fresh</h3>
+            <p>
+              Cara penyimpanan yang benar akan menjaga kualitas ikan lebih lama.
+            </p>
+            <a href="pages/artikel-3.html">Baca Artikel →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- INFORMASI -->
+    <section class="contact-section" id="informasi">
+      <div class="section-title">
+        <h2>Informasi</h2>
+        <h3>Lokasi & Informasi</h3>
+        <p>
+          Datang langsung ke lapak kami atau hubungi melalui WhatsApp. Berikut
+          informasi lengkap mengenai lokasi, jam operasional, pembayaran, dan
+          pertanyaan yang sering diajukan.
+        </p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- LEFT -->
+        <div class="contact-left">
+          <!-- MAP CARD -->
+          <div class="contact-map">
+            <div class="map-header">
+              <div class="map-icon">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3>Ikan Kita</h3>
+                <span>Cimahi Tengah, Jawa Barat</span>
+              </div>
+            </div>
+
+            <a
+              href="https://maps.app.goo.gl/YoauRt83vsU75FsJ7"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="map-preview"
+            >
+              <img
+                src="image/maps.webp"
+                alt="Peta Lokasi Lapak Ikan Kita"
+                loading="lazy"
+              />
+              <div class="map-button">
+                <i class="fa-solid fa-location-arrow" aria-hidden="true"></i>
+                Buka Google Maps
+              </div>
+            </a>
+
+            <div class="map-address">
+              <strong>Alamat</strong>
+              <p>
+                Jl. Raya Cimindi No.123<br />
+                Karangmekar, Cimahi Tengah<br />
+                Kota Cimahi
+              </p>
+            </div>
+          </div>
+
+          <!-- GRID -->
+          <div class="contact-grid">
+            <!-- JAM -->
+            <div class="contact-card">
+              <div class="card-icon">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              </div>
+              <h3>Jam Operasional</h3>
+              <span>Senin - Minggu</span>
+              <strong>07.00 - 20.00 WIB</strong>
+            </div>
+
+            <!-- PEMBAYARAN -->
+            <div class="contact-card">
+              <div class="card-icon">
+                <i class="fa-solid fa-wallet" aria-hidden="true"></i>
+              </div>
+              <h3>Pembayaran</h3>
+              <div class="payment-list">
+                <img
+                  src="image/logo-bank-mandiri.webp"
+                  alt="Bank Mandiri"
+                  loading="lazy"
+                />
+                <img src="image/gopay.webp" alt="GoPay" loading="lazy" />
+                <img src="image/logo-qris.webp" alt="QRIS" loading="lazy" />
+                <div class="cash">
+                  <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
+                  Cash
+                </div>
+              </div>
+            </div>
+
+            <!-- AMBIL LANGSUNG -->
+            <div class="contact-card">
+              <div class="card-icon">
+                <i class="fa-solid fa-store" aria-hidden="true"></i>
+              </div>
+              <h3>Ambil Langsung</h3>
+              <p>
+                Datang langsung ke lapak dan pilih ikan sesuai kebutuhan Anda.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="contact-right">
+          <div class="faq-card">
+            <h3>Pertanyaan Umum</h3>
+            <p>Beberapa pertanyaan yang paling sering ditanyakan pelanggan.</p>
+
+            <details open>
+              <summary>Apakah ikan selalu fresh?</summary>
+              <p>
+                Ya. Ikan dipanen ketika ada pesanan sehingga kualitas tetap
+                terjaga.
+              </p>
+            </details>
+
+            <details>
+              <summary>Apakah melayani grosir?</summary>
+              <p>Ya. Kami melayani pembelian eceran maupun grosir.</p>
+            </details>
+
+            <details>
+              <summary>Bagaimana cara memesan?</summary>
+              <p>
+                Hubungi kami melalui WhatsApp lalu pilih jenis ikan yang
+                diinginkan.
+              </p>
+            </details>
+
+            <details>
+              <summary>Apakah bisa pesan sehari sebelumnya?</summary>
+              <p>
+                Bisa. Anda dapat melakukan pemesanan terlebih dahulu agar proses
+                pengambilan atau pengiriman menjadi lebih cepat.
+              </p>
+            </details>
+
+            <details>
+              <summary>Apakah ikan dibersihkan sebelum dibawa pulang?</summary>
+              <p>
+                Ya. Kami dapat membantu membersihkan ikan sesuai permintaan
+                pelanggan sebelum dibawa pulang.
+              </p>
+            </details>
+          </div>
+
+          <div class="contact-help">
+            <h3>Masih ada pertanyaan?</h3>
+            <p>Tim Ikan Kita siap membantu Anda memilih ikan terbaik.</p>
+
+            <a
+              href="https://wa.me/6283163581373?text=Halo%20Admin%20Ikan%20Kita.%20%F0%9F%91%8B%0A%0ASaya%20melihat%20website%20Ikan%20Kita%20dan%20ingin%20berkonsultasi%20mengenai%20produk%20yang%20tersedia.%0A%0AMohon%20informasi%20mengenai%3A%0A%E2%80%A2%20Jenis%20ikan%0A%E2%80%A2%20Harga%20terbaru%0A%E2%80%A2%20Ketersediaan%20stok%0A%E2%80%A2%20Cara%20pemesanan%0A%0ATerima%20kasih."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="wa-button"
+            >
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              Hubungi via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-container">
+        <h2>Ikan Kita</h2>
+        <p>Penyedia Ikan Segar Berkualitas Premium di Cimahi & Bandung</p>
+        <p>© 2026 Ikan Kita. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!--=========================================
+            FOOTER OPTIMALISASI SEO
+=========================================-->
+    <footer class="detail-footer">
+      <div class="container">
+        <!-- TEKS STRUKTUR LOKASI (SEO TARGETING) -->
+        <div
+          class="seo-location-foot"
+          style="
+            margin-bottom: 25px;
+            text-align: center;
+            line-height: 1.8;
+            font-size: 14px;
+            color: #bbb;
+          "
+        >
+          <p style="margin-bottom: 10px">
+            <strong style="color: #fff">Area Layanan Utama Ikan Kita:</strong>
+          </p>
+          <p>
+            Pusat Distribusi & Jual <strong>Ikan Nila Subang</strong>,
+            <strong>Ikan Cimahi</strong>, <strong>Ikan Bandung</strong>, Bandung
+            Barat, Sumedang, hingga seluruh wilayah Jawa Barat. Kami adalah
+            supplier <strong>ikan tawar terdekat</strong> yang melayani
+            pengiriman ikan segar untuk kebutuhan konsumsi rumah tangga,
+            restoran, dan rumah makan lesehan.
+          </p>
+        </div>
+
+        <hr
+          style="border: 0; border-top: 1px solid #333; margin-bottom: 20px"
+        />
+
+        <p>
+          &copy; 2026 Ikan Kita - Supplier Ikan Segar Terpercaya. All Rights
+          Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Halaman Utama (Homepage) -->
+    <url>
+        <loc>https://ikankita.com/</loc>
+        <lastmod>2026-08-01</lastmod>
+        <priority>1.00</priority>
+    </url>
+
+    <!-- Halaman Produk & Kategori -->
+    <url>
+        <loc>https://ikankita.com/pages/produk-ikan-nila-subang-merah.html</loc>
+        <lastmod>2026-08-01</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://ikankita.com/pages/ikan-nila-subang-hitam.html</loc>
+        <lastmod>2026-08-01</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://ikankita.com/pages/ikan-nila-merah.html</loc>
+        <lastmod>2026-08-01</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://ikankita.com/pages/ikan-nila-hitam.html</loc>
+        <lastmod>2026-08-01</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://ikankita.com/pages/ikan-mas-subang.html</loc>
+        <lastmod>2026-08-01</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://ikankita.com/pages/ikan-mas.html</loc>
+        <lastmod>2026-08-01</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://ikankita.com/pages/ikan-bawal.html</loc>
+        <lastmod>2026-08-01</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://ikankita.com/pages/ikan-lele.html</loc>
+        <lastmod>2026-08-01</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://ikankita.com/pages/ikan-gurame.html</loc>
+        <lastmod>2026-08-01</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+</urlset>

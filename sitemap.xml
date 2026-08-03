@@ -1,65 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+    <!-- Homepage -->
     <url>
         <loc>https://suppliertilapiadominan-dot.github.io/ikankita/</loc>
-        <lastmod>2026-08-01</lastmod>
-        <priority>1.00</priority>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
     </url>
 
+    <!-- Produk -->
     <url>
-        <loc>https://suppliertilapiadominan-dot.github.io/ikankita/pages/produk-ikan-nila-subang-merah.html</loc>
-        <lastmod>2026-08-01</lastmod>
-        <priority>0.80</priority>
+        <loc>https://suppliertilapiadominan-dot.github.io/ikankita/pages/Produk-ikan-nila-subang-merah.html</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-nila-subang-hitam.html</loc>
-        <lastmod>2026-08-01</lastmod>
-        <priority>0.80</priority>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-nila-merah.html</loc>
-        <lastmod>2026-08-01</lastmod>
-        <priority>0.80</priority>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-nila-hitam.html</loc>
-        <lastmod>2026-08-01</lastmod>
-        <priority>0.80</priority>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-mas-subang.html</loc>
-        <lastmod>2026-08-01</lastmod>
-        <priority>0.80</priority>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-mas.html</loc>
-        <lastmod>2026-08-01</lastmod>
-        <priority>0.80</priority>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-bawal.html</loc>
-        <lastmod>2026-08-01</lastmod>
-        <priority>0.80</priority>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://suppliertilapiadominan-dot.github.io/ikankita/pages/produk-ikan-lele.html</loc>
-        <lastmod>2026-08-01</lastmod>
-        <priority>0.80</priority>
+        <loc>https://suppliertilapiadominan-dot.github.io/ikankita/pages/Ikan-lele.html</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-gurame.html</loc>
-        <lastmod>2026-08-01</lastmod>
-        <priority>0.80</priority>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
     </url>
 
 </urlset>

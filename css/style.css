@@ -693,8 +693,29 @@ header.hide {
                 8. INFORMASI & FAQ
 ==================================================*/
 
+.informasi {
+    text-align: center;
+     margin-bottom: 50px;
+}
+
+.informasi h1 {
+    margin-bottom: 10px;
+    font-size: 45px;
+}
+
+.informasi h2 {
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.informasi p {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
 .contact-section {
-    padding: 110px 8%;
+    padding: 50px 8% 8px;
     background: #fafafa;
 }
 
@@ -703,12 +724,14 @@ header.hide {
     grid-template-columns: 1.4fr 0.8fr;
     gap: 35px;
     align-items: start;
+
+    margin-bottom: 80px;
 }
 
 .contact-left {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
 }
 
 .contact-map {
@@ -960,25 +983,72 @@ header.hide {
     transform: translateY(-3px);
 }
 
-/*==================================================
-            9. FOOTER & FLOATING WA
-==================================================*/
 
-footer {
-    padding: 40px;
-    text-align: center;
+/* ===========================
+          FOOTER
+=========================== */
+
+.footer {
     background: #101010;
-    color: var(--white);
+    color: #fff;
+    padding: 70px 8% 35px;
+    text-align: center;
 }
 
-footer h2 {
-    margin-bottom: 12px;
-    font-size: 28px;
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-footer p {
-    color: #bbbbbb;
+.footer h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
 }
+
+.footer-tagline {
+    color: #bdbdbd;
+    font-size: 20px;
+    margin-bottom: 45px;
+}
+
+/* SEO */
+
+.seo-location-foot {
+    max-width: 950px;
+    margin: 0 auto 35px;
+}
+
+.seo-location-foot h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.seo-location-foot p {
+    color: #bcbcbc;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+.seo-location-foot strong {
+    color: #fff;
+    font-weight: 700;
+}
+
+.footer hr {
+    border: none;
+    border-top: 1px solid #2f2f2f;
+    margin: 40px auto 25px;
+}
+
+.copyright {
+    color: #8f8f8f;
+    font-size: 15px;
+}
+
+/* ===========================
+     FLOATING WHATSAPP
+=========================== */
 
 .floating-wa {
     position: fixed;
@@ -988,19 +1058,19 @@ footer p {
     height: 60px;
     border-radius: 50%;
     background: #25D366;
-    color: var(--white);
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 32px;
+    font-size: 30px;
     text-decoration: none;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-    z-index: 9999;
-    transition: transform 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,.25);
+    transition: .3s;
+    z-index: 999;
 }
 
 .floating-wa:hover {
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 /*==================================================

@@ -126,7 +126,7 @@ if (counterSection && counters.length > 0) {
 // Path dan nama file gambar tetap dipertahankan persis sesuai aslinya
 const slides = [
   {
-    image: "image/logo-ikan kita.webp",
+    image: "image/ikan-kita.webp",
     title: "Selamat Datang di Ikan Kita",
     desc: "Menyediakan ikan segar berkualitas premium langsung dari pembudidaya terpercaya.",
     button: "Hubungi Kami",

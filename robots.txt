@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Lokasi XML Sitemap Utama
-Sitemap: suppliertilapiadominan-dot.github.io/ikankita/sitemap.xml
+Sitemap:https://suppliertilapiadominan-dot.github.io/ikankita/sitemap.xml

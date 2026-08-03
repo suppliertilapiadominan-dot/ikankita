@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <!-- Halaman Utama (Homepage) -->
     <url>
-        <loc>suppliertilapiadominan-dot.github.io/ikankita/</loc>
+        <loc>https://suppliertilapiadominan-dot.github.io/ikankita/</loc>
         <lastmod>2026-08-01</lastmod>
         <priority>1.00</priority>
     </url>
 
-    <!-- Halaman Produk & Kategori -->
     <url>
-        <loc>https://suppliertilapiadominan-dot.github.io/ikankita/pages/Produk-ikan-nila-subang-merah.html</loc>
+        <loc>https://suppliertilapiadominan-dot.github.io/ikankita/pages/produk-ikan-nila-subang-merah.html</loc>
         <lastmod>2026-08-01</lastmod>
         <priority>0.80</priority>
     </url>
@@ -40,13 +39,13 @@
     </url>
 
     <url>
-        <loc>https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-mas.htmll</loc>
+        <loc>https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-mas.html</loc>
         <lastmod>2026-08-01</lastmod>
         <priority>0.80</priority>
     </url>
 
     <url>
-        <loc>http://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-bawal.html.</loc>
+        <loc>https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-bawal.html</loc>
         <lastmod>2026-08-01</lastmod>
         <priority>0.80</priority>
     </url>

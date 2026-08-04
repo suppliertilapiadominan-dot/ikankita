@@ -38,7 +38,63 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- =========================
+     Schema.org Product
+    ========================= -->
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Ikan Nila Hitam",
+        "description": "Ikan Nila Hitam segar berkualitas dari Ikan Kita yang dipanen sesuai kebutuhan pelanggan. Cocok untuk konsumsi keluarga, usaha kuliner, restoran, dan pembelian dalam jumlah besar.",
+        "image": [
+        "https://suppliertilapiadominan-dot.github.io/ikankita/image/nila-hitam.webp"
+        ],
+        "sku": "IK-NH-001",
+        "category": "Ikan Air Tawar",
+        "brand": {
+            "@type": "Brand",
+            "name": "Ikan Kita"
+        },
+        "manufacturer": {
+            "@type": "Organization",
+            "name": "Ikan Kita"
+        },
+        "url": "https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-nila-hitam.html"
+        </script>
+<!-- =========================
+     Schema.org Breadcrumb
+========================= -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
 
+  "itemListElement":[
+
+    {
+      "@type":"ListItem",
+      "position":1,
+      "name":"Beranda",
+      "item":"https://suppliertilapiadominan-dot.github.io/ikankita/"
+    },
+
+    {
+      "@type":"ListItem",
+      "position":2,
+      "name":"Produk",
+      "item":"https://suppliertilapiadominan-dot.github.io/ikankita/#produk"
+    },
+
+    {
+      "@type":"ListItem",
+      "position":3,
+      "name":"Ikan Nila Hitam,
+      "item":"https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-nila-hitam.html"
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -104,10 +160,6 @@
             <div class="product-detail">
                 <span class="badge">Fresh Daily Selection</span>
                 <h1>Ikan Nila Hitam</h1>
-                <div class="rating">
-                    ★★★★★
-                    <span>4.9</span>
-                </div>
                 <p class="description">
                     Ikan Nila Hitam pilihan dengan ukuran porsi presisi yang ideal untuk konsumsi pribadi maupun usaha kuliner. Dagingnya lembut, cepat matang saat digoreng atau dibakar, serta menyerap rempah bumbu secara maksimal hingga ke tulang. Dijamin segar dan bebas bau tanah melalui proses penampungan air bersih.
                 </p>
@@ -421,31 +473,6 @@
 
     <!-- JavaScript -->
     <script src="../js/jsdetail-produk.js"></script>
-
-    <!-- ================= PRODUCT SCHEMA ================= -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Ikan Nila Hitam Segar Pilihan",
-      "image": [
-        "https://ikankita.com/image/nila-hitam.webp"
-      ],
-      "description": "Ikan Nila Hitam segar pilihan ukuran porsi pas (isi 4-6 ekor/kg). Daging empuk, meresap bumbu sempurna, dan 100% bebas bau lumpur.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Ikan Kita"
-      },
-      "category": "Ikan Air Tawar",
-      "sku": "IK-NILAHITAM-001",
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "IDR",
-        "url": "https://ikankita.com/pages/produk-ikan-nila-hitam.html"
-      }
-    }
-    </script>
 
 </body>
 

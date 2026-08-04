@@ -37,8 +37,67 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
+    <!-- =========================
+     Schema.org Product
+    ========================= -->
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Ikan Nila Merah",
+        "description": "Ikan Nila Merah segar dengan kualitas terjaga dari Ikan Kita. Dipilih dari ikan terbaik sehingga menghasilkan daging yang padat, segar, dan cocok untuk berbagai olahan masakan.",
+        "image": [
+        "https://suppliertilapiadominan-dot.github.io/ikankita/image/nila-merah.webp"
+        ],
+        "sku": "IK-NM-001",
+        "category": "Ikan Air Tawar",
+        "brand": {
+            "@type": "Brand",
+            "name": "Ikan Kita"
+        },
+        "manufacturer": {
+            "@type": "Organization",
+            "name": "Ikan Kita"
+        },
+        "url": "https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-nila-merah.html"
+        }
+        </script>
 
+        <!-- =========================
+            Schema.org Breadcrumb
+        ========================= -->
+        <script type="application/ld+json">
+        {
+        "@context":"https://schema.org",
+        "@type":"BreadcrumbList",
+
+        "itemListElement":[
+
+            {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Beranda",
+            "item":"https://suppliertilapiadominan-dot.github.io/ikankita/"
+            },
+
+            {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Produk",
+            "item":"https://suppliertilapiadominan-dot.github.io/ikankita/#produk"
+            },
+
+            {
+            "@type":"ListItem",
+            "position":3,
+            "name":"Ikan Nila Merah",
+            "item":"https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-nila-merah.html"
+            }
+
+        ]
+        }
+</script>
+</head>
 <body>
 
     <!-- Floating WhatsApp -->
@@ -102,9 +161,6 @@
             <div class="product-detail">
                 <span class="badge">Fresh Daily Selection</span>
                 <h1>Ikan Nila Merah</h1>
-                <div class="rating">
-                    ★★★★★ <span>4.9</span>
-                </div>
                 <p class="description">
                     Ikan Nila Merah segar unggulan dengan rasa manis gurih alami yang sering disebut mirip ikan kakap laut. Dibudidayakan di kolam air tawar terkontrol serta melewati proses pembersihan internal (pemberokan air jernih) untuk memastikan dagingnya lembut, moist, dan bebas dari aroma tanah.
                 </p>
@@ -415,30 +471,6 @@
     <!-- JavaScript -->
     <script src="../js/jsdetail-produk.js"></script>
 
-    <!-- SCHEMA JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Ikan Nila Merah Segar Pilihan",
-      "image": [
-        "https://ikankita.com/image/ikan-nila-merah.webp"
-      ],
-      "description": "Ikan Nila Merah segar kualitas pilihan harian. Daging lembut, juicy, gurih manis mirip kakap, dan 100% bebas bau lumpur.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Ikan Kita"
-      },
-      "category": "Ikan Air Tawar",
-      "sku": "IK-NILAMERAH-001",
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "IDR",
-        "url": "https://ikankita.com/pages/produk-ikan-nila-merah.html"
-      }
-    }
-    </script>
 </body>
 
 </html>

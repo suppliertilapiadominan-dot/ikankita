@@ -38,7 +38,65 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- =========================
+     Schema.org Product
+    ========================= -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Ikan Lele",
+    "description": "Ikan Lele segar pilihan dari Ikan Kita yang dipanen sesuai pesanan agar kualitas dan kesegarannya tetap terjaga. Cocok untuk konsumsi rumah tangga maupun kebutuhan usaha kuliner.",
+    "image": [
+    "https://suppliertilapiadominan-dot.github.io/ikankita/image/ikan-lele.webp"
+    ],
+    "sku": "IK-LL-001",
+    "category": "Ikan Air Tawar",
+    "brand": {
+        "@type": "Brand",
+        "name": "Ikan Kita"
+    },
+    "manufacturer": {
+        "@type": "Organization",
+        "name": "Ikan Kita"
+    },
+    "url": "https://suppliertilapiadominan-dot.github.io/ikankita/pages/Ikan-lele.html"
+    }
+    </script>
+<!-- =========================
+     Schema.org Breadcrumb
+========================= -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
 
+  "itemListElement":[
+
+    {
+      "@type":"ListItem",
+      "position":1,
+      "name":"Beranda",
+      "item":"https://suppliertilapiadominan-dot.github.io/ikankita/"
+    },
+
+    {
+      "@type":"ListItem",
+      "position":2,
+      "name":"Produk",
+      "item":"https://suppliertilapiadominan-dot.github.io/ikankita/#produk"
+    },
+
+    {
+      "@type":"ListItem",
+      "position":3,
+      "name":"Ikan Lele",
+      "item":"https://suppliertilapiadominan-dot.github.io/ikankita/pages/Ikan-lele.html"
+    }
+
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -105,10 +163,6 @@
             <div class="product-detail">
                 <span class="badge">Fresh Hari Ini</span>
                 <h1>Ikan Lele Segar</h1>
-                <div class="rating">
-                    ★★★★★
-                    <span>5.0</span>
-                </div>
                 <p class="description">
                     Ikan Lele segar pilihan hasil budidaya terawat dengan sirkulasi air yang baik sehingga bebas bau lumpur atau bau tanah. Memiliki tekstur daging yang gurih, lembut, dan kaya nutrisi. Cocok untuk hidangan keluarga maupun kebutuhan usaha kuliner pecel lele.
                 </p>
@@ -429,32 +483,6 @@
 
     <!-- JavaScript -->
     <script src="../js/jsdetail-produk.js"></script>
-
-    <!-- ================= PRODUCT SCHEMA ================= -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Ikan Lele Segar",
-      "image": [
-        "https://suppliertilapiadominan-dot.github.io/ikankita/image/Ikan-lele.webp"
-      ],
-      "description": "Ikan Lele segar berkualitas tinggi hasil budidaya air bersih. Bebas bau tanah, gurih, dan dipanen langsung sesuai pesanan.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Ikan Kita"
-      },
-      "category": "Ikan Air Tawar",
-      "sku": "IK-LELE-001",
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "IDR",
-        "url": "https://suppliertilapiadominan-dot.github.io/ikankita/artikel/Ikan-lele.html"
-      }
-    }
-    </script>
-
 </body>
 
 </html>

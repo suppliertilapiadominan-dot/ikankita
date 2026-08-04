@@ -38,7 +38,65 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- =========================
+     Schema.org Product
+    ========================= -->
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Ikan Mas",
+        "description": "Ikan Mas segar berkualitas dari Ikan Kita yang siap memenuhi kebutuhan rumah tangga, restoran, catering, hingga usaha kuliner dengan kualitas ikan yang selalu terjaga.",
+        "image": [
+        "https://suppliertilapiadominan-dot.github.io/ikankita/image/ikan-mas.webp"
+        ],
+        "sku": "IK-MS-002",
+        "category": "Ikan Air Tawar",
+        "brand": {
+            "@type": "Brand",
+            "name": "Ikan Kita"
+        },
+        "manufacturer": {
+            "@type": "Organization",
+            "name": "Ikan Kita"
+        }
+        "url": "https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-mas.html"
+        }
+    </script>
+<!-- =========================
+     Schema.org Breadcrumb
+========================= -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
 
+  "itemListElement":[
+
+    {
+      "@type":"ListItem",
+      "position":1,
+      "name":"Beranda",
+      "item":"https://suppliertilapiadominan-dot.github.io/ikankita/"
+    },
+
+    {
+      "@type":"ListItem",
+      "position":2,
+      "name":"Produk",
+      "item":"https://suppliertilapiadominan-dot.github.io/ikankita/#produk"
+    },
+
+    {
+      "@type":"ListItem",
+      "position":3,
+      "name":"Ikan Mas",
+      "item":"https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-mas.html"
+    }
+
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -104,10 +162,6 @@
             <div class="product-detail">
                 <span class="badge">Fresh Daily Selection</span>
                 <h1>Ikan Mas Segar</h1>
-                <div class="rating">
-                    ★★★★★
-                    <span>4.9</span>
-                </div>
                 <p class="description">
                     Ikan Mas konsumsi kualitas teruji dengan karakter daging yang lembut, juicy, dan sangat mudah menyerap rempah-rempah. Dibudidayakan di kolam air tawar terkontrol serta melalui proses penampungan air bersih (pemberokan) sebelum dikirim untuk menjamin kesegaran dan cita rasa gurih alami tanpa aroma tanah.
                 </p>
@@ -421,32 +475,6 @@
 
     <!-- JavaScript -->
     <script src="../js/jsdetail-produk.js"></script>
-
-    <!-- ================= PRODUCT SCHEMA ================= -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Ikan Mas Segar Pilihan",
-      "image": [
-        "https://ikankita.com/image/ikan-mas.webp"
-      ],
-      "description": "Ikan Mas segar kualitas konsumsi harian. Daging empuk, juicy, meresap bumbu sempurna, dan bebas bau lumpur.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Ikan Kita"
-      },
-      "category": "Ikan Air Tawar",
-      "sku": "IK-MAS-001",
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "IDR",
-        "url": "https://ikankita.com/pages/produk-ikan-mas.html"
-      }
-    }
-    </script>
-
 </body>
 
 </html>

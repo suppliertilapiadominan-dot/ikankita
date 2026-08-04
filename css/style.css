@@ -480,15 +480,6 @@ header.hide {
     flex-grow: 1;
 }
 
-.rating {
-    margin-bottom: 15px;
-    color: #FFC107;
-    font-size: 18px;
-    letter-spacing: 3px;
-    display: flex;
-    justify-content: center;
-}
-
 .produk-button {
     display: flex;
     flex-direction: column;

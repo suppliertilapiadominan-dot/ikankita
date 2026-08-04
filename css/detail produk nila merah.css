@@ -160,19 +160,6 @@ a {
     line-height: 1.3;
     margin-bottom: 18px;
 }
-
-.rating {
-    color: #ffb400;
-    font-size: 24px;
-    margin-bottom: 25px;
-}
-
-.rating span {
-    color: #666;
-    font-size: 16px;
-    margin-left: 8px;
-}
-
 .description {
     color: #666;
     line-height: 32px;
@@ -925,9 +912,6 @@ a {
     }
     .product-detail h1 {
         font-size: 32px;
-    }
-    .rating {
-        font-size: 20px;
     }
     .description {
         font-size: 16px;

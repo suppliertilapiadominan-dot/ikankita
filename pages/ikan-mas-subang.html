@@ -38,7 +38,66 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- =========================
+     Schema.org Product
+    ========================= -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Ikan Mas Subang",
+    "description": "Ikan Mas Subang segar dari Ikan Kita dengan kualitas pilihan. Dipanen langsung dari pembudidaya terpercaya sehingga menghasilkan ikan segar dengan cita rasa yang khas.",
+    "image": [
+    "https://suppliertilapiadominan-dot.github.io/ikankita/image/ikan-mas-subang.webp"
+    ],
+    "sku": "IK-MS-001",
+    "category": "Ikan Air Tawar",
+    "brand": {
+        "@type": "Brand",
+        "name": "Ikan Kita"
+    },
+    "manufacturer": {
+        "@type": "Organization",
+        "name": "Ikan Kita"
+    },
 
+    "url": "https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-mas-subang.html"
+    }
+    </script>
+<!-- =========================
+     Schema.org Breadcrumb
+========================= -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+
+  "itemListElement":[
+
+    {
+      "@type":"ListItem",
+      "position":1,
+      "name":"Beranda",
+      "item":"https://suppliertilapiadominan-dot.github.io/ikankita/"
+    },
+
+    {
+      "@type":"ListItem",
+      "position":2,
+      "name":"Produk",
+      "item":"https://suppliertilapiadominan-dot.github.io/ikankita/#produk"
+    },
+
+    {
+      "@type":"ListItem",
+      "position":3,
+      "name":"Ikan Mas Subang",
+      "item":"https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-mas-subang.html"
+    }
+
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -104,10 +163,6 @@
             <div class="product-detail">
                 <span class="badge">Super Fresh Air Deras</span>
                 <h1>Ikan Mas Subang</h1>
-                <div class="rating">
-                    ★★★★★
-                    <span>5.0</span>
-                </div>
                 <p class="description">
                     Ikan Mas khas Subang yang dibudidayakan khusus di sistem kolam air deras alami. Sirkulasi oksigen tinggi membuat otot ikan aktif bergerak, menghasilkan tekstur daging yang padat, tebal, manis alami, dan 100% bebas dari bau tanah atau endapan lumpur.
                 </p>
@@ -417,32 +472,6 @@
 
     <!-- JavaScript -->
     <script src="../js/jsdetail-produk.js"></script>
-
-    <!-- ================= PRODUCT SCHEMA ================= -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Ikan Mas Subang Air Deras",
-      "image": [
-        "https://ikankita.com/image/ikan-mas-subang.webp"
-      ],
-      "description": "Ikan Mas khas Subang hasil budidaya air deras. Daging tebal, manis, gurih, dan 100% bebas bau lumpur.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Ikan Kita"
-      },
-      "category": "Ikan Air Tawar",
-      "sku": "IK-IMS-001",
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "IDR",
-        "url": "https://ikankita.com/pages/produk-ikan-mas-subang.html"
-      }
-    }
-    </script>
-
 </body>
 
 </html>

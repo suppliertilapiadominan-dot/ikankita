@@ -37,6 +37,65 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- =========================
+     Schema.org Product
+    ========================= -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Ikan Nila Subang Hitam",
+        "description": "Ikan Nila Subang Hitam segar pilihan dari Ikan Kita dengan kualitas terbaik. Dipanen sesuai permintaan agar tetap segar saat diterima pelanggan dan cocok untuk berbagai kebutuhan konsumsi maupun usaha kuliner.",
+        "image": [
+        "https://suppliertilapiadominan-dot.github.io/ikankita/image/nila-hitam-subang.webp"
+        ],
+        "sku": "IK-NSH-001",
+        "category": "Ikan Air Tawar",
+        "brand": {
+            "@type": "Brand",
+            "name": "Ikan Kita"
+        },
+        "manufacturer": {
+            "@type": "Organization",
+            "name": "Ikan Kita"
+        },
+        "url": "https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-nila-subang-hitam.html"
+        }
+</script>
+
+<!-- =========================
+     Schema.org Breadcrumb
+========================= -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+
+  "itemListElement":[
+
+    {
+      "@type":"ListItem",
+      "position":1,
+      "name":"Beranda",
+      "item":"https://suppliertilapiadominan-dot.github.io/ikankita/"
+    },
+
+    {
+      "@type":"ListItem",
+      "position":2,
+      "name":"Produk",
+      "item":"https://suppliertilapiadominan-dot.github.io/ikankita/#produk"
+    },
+
+    {
+      "@type":"ListItem",
+      "position":3,
+      "name":"Ikan Nila Subang Hitam",
+      "item":"https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-nila-subang-hitam.html"
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -104,9 +163,6 @@
             <div class="product-detail">
                 <span class="badge">Fresh Hari Ini</span>
                 <h1>Ikan Nila Subang Hitam</h1>
-                <div class="rating">
-                    ★★★★★ <span>5.0</span>
-                </div>
                 <p class="description">
                     Ikan Nila Subang Hitam merupakan ikan segar unggulan hasil budidaya terbaik dari Kabupaten Subang. Dibudidayakan menggunakan kolam air deras sehingga rasanya gurih dan lezat. Dipacking menggunakan oksigen sehingga kesegarannya bertahan sampai ke tempat anda.
                 </p>
@@ -415,31 +471,6 @@
 
     <!-- JavaScript -->
     <script src="../js/jsdetail-produk.js"></script>
-
-    <!-- SCHEMA JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Ikan Nila Subang Hitam",
-      "image": [
-        "https://ikankita.com/image/nila-hitam-subang.webp"
-      ],
-      "description": "Ikan Nila Subang Hitam segar berkualitas premium yang dipanen sesuai pesanan sehingga tetap segar saat diterima pelanggan.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Ikan Kita"
-      },
-      "category": "Ikan Air Tawar",
-      "sku": "IK-NSH-001",
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "IDR",
-        "url": "https://suppliertilapiadominan-dot.github.io/ikankita/pages/ikan-nila-subang-hitam.html"
-      }
-    }
-    </script>
 </body>
 
 </html>

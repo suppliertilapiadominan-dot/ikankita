@@ -131,11 +131,12 @@ summary:focus-visible {
 }
 
 /* ---------- 3. UTILITY ---------- */
-.container {
-  max-width: var(--page-max-width);
-  margin: 0 auto;
-  /* Fluid padding: 16px di layar sangat kecil, naik halus ke 24px */
-  padding: 0 clamp(16px, 5vw, 24px);
+.container{
+    width:100%;
+    max-width:1240px;
+    margin:auto;
+    padding-left:24px;
+    padding-right:24px;
 }
 
 .visually-hidden {
@@ -420,12 +421,12 @@ summary:focus-visible {
 }
 
 /* ---------- 8. LAYOUT DUA KOLOM (ARTIKEL + SIDEBAR) ---------- */
-.article-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
-  gap: 48px;
-  align-items: start;
-  padding: 32px 0 80px;
+.article-layout{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 300px;
+    gap:60px;
+    align-items:start;
+    padding:40px 0 80px;
 }
 
 /* ---------- 9. TABLE OF CONTENTS ---------- */
@@ -479,55 +480,71 @@ summary:focus-visible {
 }
 
 /* ---------- 10. ISI ARTIKEL (TYPOGRAPHY) ---------- */
-.article-content {
-  max-width: var(--content-max-width);
+/* ===========================
+   TYPOGRAPHY
+=========================== */
+
+html{
+    font-size:16px;
+    -webkit-text-size-adjust:100%;
 }
 
-.article-content h2 {
-  font-size: clamp(1.3rem, 3.4vw, 1.6rem);
-  margin-top: 2.6rem;
-  scroll-margin-top: calc(var(--header-height) + 16px);
+body{
+    margin:0;
+    font-family:"Inter",sans-serif;
+    font-size:18px;
+    font-weight:400;
+    line-height:1.9;
+    color:#2d2d2d;
+    background:#ffffff;
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
 }
 
-.article-content h3 {
-  font-size: clamp(1.1rem, 2.8vw, 1.25rem);
-  margin-top: 1.8rem;
-  scroll-margin-top: calc(var(--header-height) + 16px);
+/* Semua tulisan sejajar */
+.article-content p{
+    margin:0 0 28px;
+    font-size:18px;
+    line-height:1.9;
+    text-align:justify;
+    text-justify:inter-word;
+    color:#333;
 }
 
-.article-content p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  margin: 0 0 1.2rem;
-  color: var(--color-text);
-  /* Panjang baris nyaman dibaca (idealnya 60-75 karakter) */
-  max-width: 68ch;
+/* list */
+.article-content li{
+    font-size:18px;
+    line-height:1.9;
+    margin-bottom:10px;
 }
 
-.article-content li {
-  font-size: 1.02rem;
-  line-height: 1.8;
-  margin-bottom: 6px;
+/* link */
+.article-content a{
+    color:#2b7de9;
 }
 
-.article-content figure {
-  margin: 28px 0;
+.article-content strong{
+    font-weight:700;
 }
 
-.article-content figure img {
-  border-radius: var(--radius-md);
-  transition: transform var(--transition-base);
+.article-content h2{
+    font-size:32px;
+    font-weight:700;
+    margin-top:55px;
+    margin-bottom:24px;
+    line-height:1.4;
 }
 
-.article-content figure:hover img {
-  transform: scale(1.015);
+.article-content h3{
+    font-size:26px;
+    font-weight:700;
+    margin-top:45px;
+    margin-bottom:18px;
 }
 
-.article-content figcaption {
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-  margin-top: 8px;
-  text-align: center;
+.article-content img{
+    width:100%;
+    border-radius:14px;
 }
 
 /* Quote */
@@ -1287,6 +1304,52 @@ table.comparison-table {
     bottom: calc(20px + var(--safe-bottom));
     right: 16px;
   }
+
+  .article-layout{
+
+display:block;
+
+}
+
+.sidebar{
+
+display:none;
+
+}
+
+.article-content{
+
+width:100%;
+
+}
+
+.article-content p{
+
+font-size:18px;
+
+line-height:1.9;
+
+text-align:justify;
+
+}
+
+.article-content h2{
+
+font-size:28px;
+
+}
+
+.article-content h3{
+
+font-size:24px;
+
+}
+
+.article-hero__title{
+
+font-size:36px;
+
+}
 }
 
 /* ---------- 25. RESPONSIVE ---------- */

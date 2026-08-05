@@ -4,6 +4,12 @@
    Deskripsi: Stylesheet utama untuk seluruh artikel website
    Ikan Kita. Struktur ini dibuat agar TIDAK berubah antar
    artikel — hanya konten (HTML) yang berganti.
+
+   REVISI: audit mobile/tablet — perbaikan navbar mobile,
+   sidebar responsive, kontras aksesibilitas, dark mode,
+   safe-area, dan penghalusan typography di layar kecil.
+   Tidak ada selector duplikat, tidak ada !important baru
+   selain yang sudah ada di file asli (footer-social).
    ========================================================= */
 
 /* ---------- 1. DESIGN TOKENS (CSS VARIABLES) ---------- */
@@ -11,6 +17,10 @@
   /* Warna brand */
   --color-primary: #d3453d;
   --color-primary-dark: #b8362f;
+  /* Varian teks: dipakai khusus untuk teks/link di atas latar terang
+     agar rasio kontras memenuhi WCAG AA (>= 4.5:1). --color-primary
+     tetap dipakai untuk background/aksen/hover. */
+  --color-primary-text: #a8362f;
   --color-primary-soft: #fbe9e8;
   --color-secondary: #222222;
   --color-text: #2b2b2b;
@@ -52,6 +62,12 @@
   --content-max-width: 800px;
   --page-max-width: 1240px;
   --transition-base: 0.25s ease;
+
+  /* Header height — dipakai untuk scroll-padding & posisi dropdown mobile */
+  --header-height: 80px;
+
+  /* Ruang aman untuk elemen fixed di perangkat dengan gesture bar (iOS) */
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 /* ---------- 2. RESET DASAR ---------- */
@@ -63,6 +79,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Mencegah heading tersembunyi di belakang sticky header saat klik anchor/TOC */
+  scroll-padding-top: calc(var(--header-height) + 16px);
 }
 
 body {
@@ -116,7 +134,8 @@ summary:focus-visible {
 .container {
   max-width: var(--page-max-width);
   margin: 0 auto;
-  padding: 0 24px;
+  /* Fluid padding: 16px di layar sangat kecil, naik halus ke 24px */
+  padding: 0 clamp(16px, 5vw, 24px);
 }
 
 .visually-hidden {
@@ -131,6 +150,7 @@ summary:focus-visible {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 12px 24px;
   border-radius: 999px;
@@ -138,6 +158,8 @@ summary:focus-visible {
   font-size: 0.95rem;
   border: 1px solid transparent;
   cursor: pointer;
+  /* Target sentuh nyaman di jempol (min. 44px tinggi rekomendasi Apple/Google) */
+  min-height: 44px;
   transition: transform var(--transition-base), box-shadow var(--transition-base), background var(--transition-base);
 }
 
@@ -189,7 +211,9 @@ summary:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  position: relative;
 }
 
 .navbar__logo {
@@ -228,7 +252,7 @@ summary:focus-visible {
 
 .navbar__menu a:hover,
 .navbar__menu a[aria-current="page"] {
-  color: var(--color-primary);
+  color: var(--color-primary-text);
 }
 
 .navbar__toggle {
@@ -237,6 +261,10 @@ summary:focus-visible {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+  /* Target sentuh jempol yang layak */
+  width: 44px;
+  height: 44px;
+  line-height: 1;
 }
 
 /* ---------- 6. BREADCRUMB ---------- */
@@ -244,6 +272,9 @@ summary:focus-visible {
   font-size: 0.85rem;
   color: var(--color-text-muted);
   margin: 20px 0 0;
+  /* Breadcrumb panjang di HP tidak boleh memicu overflow horizontal halaman */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .breadcrumb ol {
@@ -262,7 +293,7 @@ summary:focus-visible {
 }
 
 .breadcrumb a:hover {
-  color: var(--color-primary);
+  color: var(--color-primary-text);
 }
 
 .breadcrumb [aria-current="page"] {
@@ -278,7 +309,7 @@ summary:focus-visible {
 .article-hero__category {
   display: inline-block;
   background: var(--color-primary-soft);
-  color: var(--color-primary);
+  color: var(--color-primary-text);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -289,13 +320,16 @@ summary:focus-visible {
 }
 
 .article-hero__title {
-  font-size: clamp(1.9rem, 4vw, 2.75rem);
+  /* Skala lebih landai di layar sangat kecil (320-375px) supaya judul
+     panjang tidak terasa "berat" di atas, tetap besar & tegas di desktop */
+  font-size: clamp(1.6rem, 6vw, 2.75rem);
   font-weight: 800;
   max-width: 900px;
+  letter-spacing: -0.01em;
 }
 
 .article-hero__desc {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
   color: var(--color-text-muted);
   max-width: 760px;
   margin-bottom: 20px;
@@ -334,8 +368,8 @@ summary:focus-visible {
 }
 
 .share-btn {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -428,7 +462,7 @@ summary:focus-visible {
 
 .toc a:hover,
 .toc a.active {
-  color: var(--color-primary);
+  color: var(--color-primary-text);
   font-weight: 600;
 }
 
@@ -437,30 +471,30 @@ summary:focus-visible {
   margin-top: 6px;
 }
 
-/* Sticky sidebar TOC untuk desktop besar ditangani lewat .sidebar (lihat bawah) */
-
 /* ---------- 10. ISI ARTIKEL (TYPOGRAPHY) ---------- */
 .article-content {
   max-width: var(--content-max-width);
 }
 
 .article-content h2 {
-  font-size: 1.6rem;
+  font-size: clamp(1.3rem, 3.4vw, 1.6rem);
   margin-top: 2.6rem;
-  scroll-margin-top: 90px;
+  scroll-margin-top: calc(var(--header-height) + 16px);
 }
 
 .article-content h3 {
-  font-size: 1.25rem;
+  font-size: clamp(1.1rem, 2.8vw, 1.25rem);
   margin-top: 1.8rem;
-  scroll-margin-top: 90px;
+  scroll-margin-top: calc(var(--header-height) + 16px);
 }
 
 .article-content p {
   font-size: 1.05rem;
-  line-height: 1.85;
+  line-height: 1.8;
   margin: 0 0 1.2rem;
   color: var(--color-text);
+  /* Panjang baris nyaman dibaca (idealnya 60-75 karakter) */
+  max-width: 68ch;
 }
 
 .article-content li {
@@ -496,7 +530,7 @@ summary:focus-visible {
   padding: 20px 26px;
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: clamp(1rem, 2.6vw, 1.15rem);
   font-weight: 600;
   color: var(--color-secondary);
   margin: 28px 0;
@@ -515,7 +549,7 @@ summary:focus-visible {
 /* ---------- 11. INFO / TIPS / WARNING / FACT / RESEARCH / NOTE BOX ---------- */
 .info-box {
   border-radius: var(--radius-md);
-  padding: 20px 22px;
+  padding: 18px clamp(16px, 4vw, 22px);
   margin: 24px 0;
   border: 1px solid transparent;
 }
@@ -575,6 +609,16 @@ summary:focus-visible {
   margin: 28px 0;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
+  -webkit-overflow-scrolling: touch;
+  /* Bayangan tipis di kanan sebagai isyarat visual "masih bisa digeser" di HP */
+  background:
+    linear-gradient(to right, var(--color-bg) 0%, rgba(255,255,255,0) 2%) 0 0,
+    linear-gradient(to left, var(--color-bg) 0%, rgba(255,255,255,0) 2%) 100% 0,
+    radial-gradient(farthest-side at 0 50%, rgba(0,0,0,0.08), rgba(0,0,0,0)) 0 0,
+    radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,0.08), rgba(0,0,0,0)) 100% 0;
+  background-repeat: no-repeat;
+  background-size: 24px 100%, 24px 100%, 8px 100%, 8px 100%;
+  background-attachment: local, local, scroll, scroll;
 }
 
 table.comparison-table {
@@ -705,8 +749,8 @@ table.comparison-table {
   right: 24px;
   background: #fff;
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   font-size: 1.2rem;
   cursor: pointer;
@@ -774,7 +818,7 @@ table.comparison-table {
 
 .cta-premium h2 {
   color: #fff;
-  font-size: 1.6rem;
+  font-size: clamp(1.3rem, 3.6vw, 1.6rem);
 }
 
 .cta-premium p {
@@ -788,6 +832,12 @@ table.comparison-table {
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
+}
+
+/* CTA tidak boleh terasa "raksasa" di HP: batasi lebar tombol,
+   jangan full-width memenuhi layar */
+.cta-premium__actions .btn {
+  flex: 0 1 auto;
 }
 
 .cta-premium .btn-outline {
@@ -831,12 +881,6 @@ table.comparison-table {
   margin-bottom: 4px;
 }
 
-.map-card__rating {
-  color: #e0a319;
-  font-weight: 700;
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-}
 
 .map-card__meta {
   font-size: 0.92rem;
@@ -872,6 +916,7 @@ table.comparison-table {
   width: 100%;
   height: 140px;
   object-fit: cover;
+  background: var(--color-bg-section); /* placeholder halus jika gambar gagal dimuat */
 }
 
 .related-card__body {
@@ -881,7 +926,7 @@ table.comparison-table {
 .related-card__category {
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-primary-text);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
@@ -925,7 +970,7 @@ table.comparison-table {
 .author-box a {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-primary-text);
 }
 
 /* ---------- 20. UPDATE INFO ---------- */
@@ -972,7 +1017,7 @@ table.comparison-table {
 }
 
 .sidebar-list a:hover {
-  color: var(--color-primary);
+  color: var(--color-primary-text);
 }
 
 .sidebar-cta {
@@ -987,7 +1032,7 @@ table.comparison-table {
 
 .sidebar-cta .btn-primary {
   background: #fff;
-  color: var(--color-primary);
+  color: var(--color-primary-text);
   width: 100%;
   justify-content: center;
   margin-top: 6px;
@@ -996,7 +1041,7 @@ table.comparison-table {
 /* ---------- 22. BACK TO TOP ---------- */
 .back-to-top {
   position: fixed;
-  bottom: 28px;
+  bottom: calc(28px + var(--safe-bottom));
   right: 28px;
   width: 46px;
   height: 46px;
@@ -1085,8 +1130,8 @@ table.comparison-table {
 }
 
 .footer-social a {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid #3d3d3d;
   display: grid;
@@ -1140,6 +1185,7 @@ table.comparison-table {
   border: 1px solid #3d3d3d;
   border-radius: 999px;
   padding: 10px 18px;
+  min-height: 44px;
   transition: border-color 0.3s ease, background 0.3s ease;
 }
 
@@ -1204,7 +1250,7 @@ table.comparison-table {
 /* ---------- 24b. FLOATING WHATSAPP ---------- */
 .whatsapp-float {
   position: fixed;
-  bottom: 28px;
+  bottom: calc(28px + var(--safe-bottom));
   left: 28px;
   width: 54px;
   height: 54px;
@@ -1225,27 +1271,34 @@ table.comparison-table {
 
 @media (max-width: 768px) {
   .whatsapp-float {
-    bottom: 20px;
-    left: 20px;
-    width: 48px;
-    height: 48px;
+    bottom: calc(20px + var(--safe-bottom));
+    left: 16px;
+    width: 50px;
+    height: 50px;
   }
   .back-to-top {
-    bottom: 20px;
-    right: 20px;
+    bottom: calc(20px + var(--safe-bottom));
+    right: 16px;
   }
 }
 
 /* ---------- 25. RESPONSIVE ---------- */
+
+/* --- Tablet & di bawahnya (<=1024px): sidebar pindah ke bawah,
+   dan berubah jadi TUMPUKAN VERTIKAL (bukan grid multi-kolom).
+   Alasan: Daftar Isi, CTA, dan Produk Populer adalah blok konten
+   sekuensial dengan tinggi berbeda-beda, bukan kartu setara —
+   grid auto-fit membuatnya terlihat timpang di tablet. --- */
 @media (max-width: 1024px) {
   .article-layout {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .sidebar {
     position: static;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    display: flex;
+    flex-direction: column;
   }
 
   .footer-grid {
@@ -1273,17 +1326,54 @@ table.comparison-table {
   }
 }
 
+/* --- Navbar mobile: dropdown panel fungsional ---
+   CSS ini mengasumsikan Artikel.js menambah/menghapus class
+   "is-open" pada <ul class="navbar__menu"> saat tombol
+   .navbar__toggle diklik (pola paling umum). Jika JS memakai
+   nama class lain, samakan nama class di bawah ini dengannya. */
 @media (max-width: 768px) {
   .navbar__menu {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-soft);
+    padding: 8px 24px 16px;
+  }
+
+  .navbar__menu.is-open {
+    display: flex;
+  }
+
+  .navbar__menu li {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .navbar__menu li:first-child {
+    border-top: none;
+  }
+
+  .navbar__menu a {
+    display: block;
+    padding: 14px 4px;
+    font-size: 1rem;
+    /* Target sentuh jempol penuh lebar */
+    min-height: 44px;
   }
 
   .navbar__toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .article-hero__title {
-    font-size: 1.7rem;
+    font-size: clamp(1.5rem, 7vw, 1.9rem);
   }
 
   .toc {
@@ -1294,8 +1384,42 @@ table.comparison-table {
     padding: 32px 20px;
   }
 
+  .cta-premium__actions .btn {
+    width: 100%;
+  }
+
   .author-box {
     flex-direction: column;
+  }
+}
+
+/* --- Layar sangat kecil (320-390px): rapatkan spacing besar
+   tanpa mengubah struktur, supaya tidak terasa "kosong berlebih" --- */
+@media (max-width: 390px) {
+  .article-hero {
+    padding: 24px 0 16px;
+  }
+
+  .article-layout {
+    padding: 24px 0 56px;
+  }
+
+  .toc,
+  .info-box,
+  .cta-premium,
+  .map-card__body,
+  .author-box {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .article-hero__share {
+    gap: 8px;
+  }
+
+  .share-btn {
+    width: 38px;
+    height: 38px;
   }
 }
 

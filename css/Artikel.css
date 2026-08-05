@@ -202,9 +202,16 @@ summary:focus-visible {
   position: sticky;
   top: 0;
   z-index: 900;
+  width: 100%;
   background: rgba(255, 255, 255, 0.92);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--color-border);
+  /* Perbaikan bug WebKit/Safari iOS: position:sticky + backdrop-filter
+     tanpa compositing layer sendiri bisa membuat header "pecah"/terpisah
+     sesaat saat momentum-scroll. translateZ(0) memaksa GPU layer terpisah
+     supaya header selalu repaint utuh saat scroll. */
+  transform: translateZ(0);
 }
 
 .navbar {

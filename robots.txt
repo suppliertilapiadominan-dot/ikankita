@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 # Lokasi Utama
-Sitemap: https://suppliertilapiadominan-dot.github.io/ikankita/sitemap.xml
+Sitemap: https://ikan-kita.id/sitemap.xml
